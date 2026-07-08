@@ -1,4 +1,4 @@
-# CineScope 🎬
+# MovieVerse 🎬
 
 A terminal-based movie explorer and recommendation system I built to get more
 comfortable working with external APIs, JSON storage, and building an actual
@@ -9,19 +9,24 @@ API for movie data and Rich for a cleaner-looking terminal.
 
 - **Search Movie** — look up any movie by title and see its year, genre,
   runtime, IMDb rating, director, cast, language, country, plot, and awards.
+
 - **Recommendations** — after a search, get 4-5 similar movies based on a
   genre/title mapping I put together (no ML, just a lookup table).
+
 - **Favorites** — bookmark movies you like, saved to `data/favorites.json`.
+
 - **Search History** — every movie you look up gets logged to
   `data/history.json` so you can look back at it later.
+
 - **Recently Viewed** — quick view of your last 5 searches.
+
 - **Random Movie** — picks something from a small internal list and pulls
   its details, for when you don't know what to search.
 
 ## Project structure
 
 ```
-cinescope/
+movieverse/
 ├── assets/
 ├── data/
 │   ├── history.json
@@ -35,42 +40,8 @@ cinescope/
 ├── main.py
 ├── requirements.txt
 ├── .gitignore
-└── .env.example
+└── .env                 # contains the API key
 ```
-
-## Setup
-
-1. Clone the repo and go into the folder:
-   ```
-   git clone <your-repo-url>
-   cd cinescope
-   ```
-
-2. (Optional but recommended) make a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate      # on Windows: venv\Scripts\activate
-   ```
-
-3. Install the dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Get a free OMDb API key from http://www.omdbapi.com/apikey.aspx
-
-5. Copy `.env.example` to `.env` and paste your key in:
-   ```
-   cp .env.example .env
-   ```
-   ```
-   OMDB_API_KEY=your_actual_key_here
-   ```
-
-6. Run it:
-   ```
-   python main.py
-   ```
 
 ## Tech used
 

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "title": "The Hangover",
+    "year": "2009",
+    "genre": "Comedy",
+    "imdb_rating": "7.7"
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": "2015",
+    "genre": "Action, Adventure, Sci-Fi",
+    "imdb_rating": "8.1"
+  }
+]
