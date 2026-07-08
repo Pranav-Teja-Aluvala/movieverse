@@ -1,5 +1,5 @@
 """
-CineScope - a terminal movie explorer built around the OMDb API.
+MovieVerse - a terminal movie explorer built around the OMDb API.
 
 Run this after setting up your .env file with an OMDB_API_KEY.
 """
@@ -76,7 +76,7 @@ def main():
         elif choice == "5":
             random_movie_flow(history_manager)
         elif choice == "6":
-            ui.console.print("\n[bold cyan]Thanks for using CineScope. See ya![/bold cyan]")
+            ui.console.print("\n[bold cyan]Thanks for using MovieVerse. See ya![/bold cyan]")
             break
 
 
@@ -84,4 +84,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\nExiting CineScope.")
+        print("\nExiting MovieVerse.")

@@ -1,68 +1,183 @@
 # MovieVerse 🎬
 
-A terminal-based movie explorer and recommendation system I built to get more
-comfortable working with external APIs, JSON storage, and building an actual
-usable CLI (instead of just print statements everywhere). It uses the OMDb
-API for movie data and Rich for a cleaner-looking terminal.
+<p align="center">
+  <img src="assets/demo.gif" alt="MovieVerse Demo" width="900">
+</p>
 
-## What it does
+A terminal-based movie explorer built using Python, the OMDb API, and Rich.
 
-- **Search Movie** — look up any movie by title and see its year, genre,
-  runtime, IMDb rating, director, cast, language, country, plot, and awards.
+This project started as a way to get comfortable working with external APIs, file handling, and structuring a Python project into multiple modules instead of throwing everything into one script. Along the way it became a clean, feature-rich CLI application with persistent local storage and a polished terminal interface.
 
-- **Recommendations** — after a search, get 4-5 similar movies based on a
-  genre/title mapping I put together (no ML, just a lookup table).
+---
 
-- **Favorites** — bookmark movies you like, saved to `data/favorites.json`.
+## Features
 
-- **Search History** — every movie you look up gets logged to
-  `data/history.json` so you can look back at it later.
+- Search any movie using the OMDb API
+- View detailed movie information
+- Get similar movie recommendations
+- Save movies to Favorites
+- Automatic Search History
+- Recently Viewed movies
+- Random Movie picker
+- Rich-powered terminal interface
+- Local JSON storage (no database required)
 
-- **Recently Viewed** — quick view of your last 5 searches.
+---
 
-- **Random Movie** — picks something from a small internal list and pulls
-  its details, for when you don't know what to search.
+## Demo
 
-## Project structure
+<p align="center">
+  <img src="assets/demo.gif" alt="MovieVerse Demo">
+</p>
 
-```
+---
+
+## Screenshots
+
+### Main Menu
+
+![Main Menu](assets/screenshots/menu.png)
+
+### Search Movie
+
+![Search Movie](assets/screenshots/SearchMovie.png)
+
+### Movie Details
+
+![Movie Details](assets/screenshots/movie-details.png)
+
+### Recommendations
+
+![Recommendations](assets/screenshots/recommendation.png)
+
+### Favorites
+
+![Favorites](assets/screenshots/favourites.png)
+
+### Search History
+
+![History](assets/screenshots/history.png)
+
+### Recently Viewed
+
+![Recently Viewed](assets/screenshots/recent.png)
+
+### Random Movie
+
+![Random Movie](assets/screenshots/random-movie.png)
+
+---
+
+## Project Structure
+
+```text
 movieverse/
 ├── assets/
+│   ├── demo.gif
+│   └── screenshots/
+│       ├── menu.png
+│       ├── SearchMovie.png
+│       ├── movie-details.png
+│       ├── recommendation.png
+│       ├── favourites.png
+│       ├── history.png
+│       ├── recent.png
+│       └── random-movie.png
+│
 ├── data/
-│   ├── history.json
-│   └── favorites.json
+│   ├── favorites.json
+│   └── history.json
+│
 ├── src/
-│   ├── api.py          # talks to the OMDb API
-│   ├── history.py       # handles history + favorites (json read/write)
-│   ├── recommender.py    # genre/title based recommendation lookup
+│   ├── api.py            # talks to the OMDb API
+│   ├── history.py        # handles history + favorites
+│   ├── recommender.py    # genre/title based
 │   ├── ui.py             # all the Rich terminal output
 │   └── utils.py          # small json helper functions
+│
 ├── main.py
 ├── requirements.txt
+├── .env.example          # contains the API key
 ├── .gitignore
-└── .env                 # contains the API key
+└── README.md
 ```
 
-## Tech used
+---
 
-- Python 3
-- `requests` — for hitting the OMDb API
-- `rich` — for the terminal tables/panels/menu
-- `python-dotenv` — for loading the API key from `.env`
+## Tech Stack
+
+- Python 3 - requests — for hitting the OMDb API
+- rich — for the terminal tables/panels/menu
+- python-dotenv — for loading the API key from .env
 - JSON — for storing history and favorites locally, no database needed
 
-## Notes / things I'd add later
+---
 
-- Right now the recommendation system is a hardcoded dictionary. It works
-  fine for common movies but obviously doesn't scale — a genre-similarity
-  score or hitting a second API for "similar titles" would be the next step.
-- Favorites and history are stored per-machine (just local JSON files), so
-  there's no multi-user support. Wasn't really the point of this project.
-- Would be cool to add a "compare two movies" feature at some point.
+## How It Works
 
-## Why I built this
+1. Enter a movie title.
+2. The application sends a request to the OMDb API.
+3. Movie details are displayed inside a Rich terminal panel.
+4. Similar movies are suggested using a lightweight recommendation mapping.
+5. Searches and favorites are stored locally inside JSON files.
 
-Wanted a project that actually used a real API instead of a toy dataset,
-and forced me to think about structuring code into modules instead of
-dumping everything into one script. Also just wanted an excuse to use
-Rich properly.
+---
+
+## Running Locally
+
+Clone the repository.
+
+```bash
+git clone https://github.com/Pranav-Teja-Aluvala/movieverse.git
+cd movieverse
+```
+
+Install dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file from `.env.example`.
+
+```env
+OMDB_API_KEY=YOUR_API_KEY
+```
+
+Run the application.
+
+```bash
+python main.py
+```
+
+---
+
+## Future Improvements
+
+- Better recommendation engine using embeddings or similarity scores
+- Movie poster support inside the terminal
+- Compare two movies
+- Watchlist support
+- Filters by genre, year and IMDb rating
+- Export favorites to CSV
+
+---
+
+## Why I Built This
+
+I wanted a project that felt closer to an actual application than another practice script.
+
+It gave me hands-on experience with:
+
+- Working with REST APIs
+- Organizing a Python project into modules
+- Reading and writing JSON files
+- Environment variables
+- Building a polished command-line interface with Rich
+- Structuring a project for GitHub
+
+It also ended up becoming one of those projects where I learned far more from cleaning, refactoring, and polishing than I did from writing the first version.
+
+---
+
+If you have suggestions or ideas for improvements, feel free to open an issue or fork the project.

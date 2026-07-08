@@ -12,9 +12,27 @@
     "imdb_rating": "8.1"
   },
   {
-    "title": "IDK",
-    "year": "2017",
-    "genre": "Short, Drama",
-    "imdb_rating": "N/A"
+    "title": "Interstellar",
+    "year": "2014",
+    "genre": "Adventure, Drama, Sci-Fi",
+    "imdb_rating": "8.7"
+  },
+  {
+    "title": "The Dark Knight",
+    "year": "2008",
+    "genre": "Action, Crime, Drama",
+    "imdb_rating": "9.1"
+  },
+  {
+    "title": "Exit",
+    "year": "2019\u20132023",
+    "genre": "Crime, Drama, Thriller",
+    "imdb_rating": "8.2"
+  },
+  {
+    "title": "Parasite",
+    "year": "2019",
+    "genre": "Drama, Thriller",
+    "imdb_rating": "8.5"
   }
 ]

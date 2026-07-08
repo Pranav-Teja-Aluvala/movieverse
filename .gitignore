@@ -7,6 +7,7 @@ env/
 __pycache__/
 *.pyc
 *.pyo
+*.py[cod]
 
 # editor stuff
 .vscode/

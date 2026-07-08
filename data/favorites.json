@@ -4,5 +4,17 @@
     "year": "2009",
     "genre": "Comedy",
     "imdb_rating": "7.7"
+  },
+  {
+    "title": "Interstellar",
+    "year": "2014",
+    "genre": "Adventure, Drama, Sci-Fi",
+    "imdb_rating": "8.7"
+  },
+  {
+    "title": "Parasite",
+    "year": "2019",
+    "genre": "Drama, Thriller",
+    "imdb_rating": "8.5"
   }
 ]
