@@ -1,9 +1,5 @@
 # MovieVerse 🎬
 
-<p align="center">
-  <img src="assets/demo.gif" alt="MovieVerse Demo" width="900">
-</p>
-
 A terminal-based movie explorer built using Python, the OMDb API, and Rich.
 
 This project started as a way to get comfortable working with external APIs, file handling, and structuring a Python project into multiple modules instead of throwing everything into one script. Along the way it became a clean, feature-rich CLI application with persistent local storage and a polished terminal interface.
